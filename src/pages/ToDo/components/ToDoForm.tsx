@@ -1,13 +1,10 @@
 
 import {useState} from 'react'
 import { ToDoInterface } from '../interfaces'
+import { ToDoFormProps } from '../types'
 
-type ToDoListProps = {
-    addTask: (task: ToDoInterface) => void,
-    children: React.ReactNode; 
-}
 
-const ToDoList: React.FC<ToDoListProps> = ({addTask, children}) => {
+const ToDoForm: React.FC<ToDoFormProps> = ({addTask}) => {
     const input: ToDoInterface = {
         id: 0,
         title: '',
@@ -36,8 +33,7 @@ const ToDoList: React.FC<ToDoListProps> = ({addTask, children}) => {
     }
 
     return (
-        <>
-            <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
                 <input 
                     value={userInput.title}
                     type="text"
@@ -54,9 +50,7 @@ const ToDoList: React.FC<ToDoListProps> = ({addTask, children}) => {
                 />
                 <button type="submit">Add task</button>
             </form>
-        {children}
-        </>
     )
 }
 
-export default ToDoList;
+export default ToDoForm;

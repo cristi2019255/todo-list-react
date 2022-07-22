@@ -1,10 +1,4 @@
-import { ToDoInterface } from "../interfaces";
-
-type ToDoListItemProps = {
-    todo: ToDoInterface,
-    toggleTask: (id: number) => void,
-    removeTask: (id: number) => void
-}
+import { ToDoListItemProps } from "../types";
 
 const ToDoListItem: React.FC<ToDoListItemProps> = ({todo, toggleTask, removeTask}) => {
     return (

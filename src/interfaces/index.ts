@@ -1,3 +1,3 @@
-import ToDoInterface from "./ToDo";
+import { IChildrenItem } from "./IChildrenItem";
 
-export type { ToDoInterface };
+export type { IChildrenItem };
